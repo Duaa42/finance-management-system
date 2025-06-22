@@ -1,0 +1,13 @@
+<div class="bg-white shadow rounded p-4">
+  <h2 class="text-lg font-semibold mb-4">Recent Transactions</h2>
+  <ul class="divide-y">
+    <li *ngFor="let tx of transactions" class="py-2 flex justify-between">
+      <span>{{ tx.description }}</span>
+      <span [ngClass]="tx.amount >= 0 ? 'text-green-600' : 'text-red-600'">
+        {{ tx.amount | currency:'USD' }}
+      </span>
+      <span>{{ tx.type }}</span>
+      <span ngClass="text-green-600">{{ tx.time }}</span>
+    </li>
+  </ul>
+</div>

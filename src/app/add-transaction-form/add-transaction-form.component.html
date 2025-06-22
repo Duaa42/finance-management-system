@@ -1,0 +1,14 @@
+<div class="bg-white shadow rounded p-4">
+  <h2 class="text-lg font-semibold mb-4">Add Transaction</h2>
+  <form (ngSubmit)="submitForm()" [formGroup]="txForm" class="space-y-4">
+    <input type="text" formControlName="description" placeholder="Description"
+      class="w-full border rounded px-3 py-2" required />
+    <input type="number" formControlName="amount" placeholder="Amount"
+      class="w-full border rounded px-3 py-2" required />
+    <select formControlName="type" class="w-full border rounded px-3 py-2">
+      <option value="income">Income</option>
+      <option value="expense">Expense</option>
+    </select>
+    <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded">Add</button>
+  </form>
+</div>

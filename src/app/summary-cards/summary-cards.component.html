@@ -1,0 +1,14 @@
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+  <div class="bg-white shadow rounded p-4 text-center">
+    <h2 class="text-sm text-gray-500">Income</h2>
+    <p class="text-xl font-bold text-green-600">{{ this.dataService.getTotalIncome()| currency:'USD' }}</p>
+  </div>
+  <div class="bg-white shadow rounded p-4 text-center">
+    <h2 class="text-sm text-gray-500">Expenses</h2>
+    <p class="text-xl font-bold text-red-600">{{ this.dataService.getTotalExpense() | currency }}</p>
+  </div>
+  <div class="bg-white shadow rounded p-4 text-center">
+    <h2 class="text-sm text-gray-500">Balance</h2>
+    <p class="text-xl font-bold text-blue-600">{{ this.dataService.getTotalIncome()-this.dataService.getTotalExpense() | currency }}</p>
+  </div>
+</div>
